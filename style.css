@@ -1,0 +1,17 @@
+.movie-card{
+    width: 14rem; 
+    height: 18rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.poster {
+    width: 12rem;
+    height: 16rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.clear-recent-movies-row {
+    margin-top: 2rem;
+}
