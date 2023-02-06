@@ -1,0 +1,32 @@
+/* :root
+.body{
+  display: grid;
+  display: flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.fluid-container{
+display: flexbox;
+padding: auto;
+}
+
+/* img{
+  align-content: flex-end;
+  max-width: 200px;
+  max-height: 500px;
+} */
+
+/* .form-control{
+  
+}
+.button{
+  color: yellow;
+  display:inline;
+  
+  
+}
+
+.card{
+  display: grid;
+ 
+} */

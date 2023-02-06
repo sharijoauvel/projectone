@@ -1,16 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
+
+  <title>Document</title>
+
 </head>
+<!--movie search box to retrieve movie details-->
+<!--2 search buttons with click function -->
+
 <body>
-  
+  <div class="container">
+
+    <form id="movie-form">
+
+      <label for="movie-input">Search for movies</label>
+      <input type="text" id="movie-input"><br>
+      <button type="button" class="btn btn-outline-info">Rating</button>
+    </form>
+    <div id="movie-view"></div>
+
+  </div>
+
+  <!-- text area for retrieved info -->
+  <div class="card">
+    <div class="card-body text">
+      <p class="card-text">
+      </p>Release date:</p>
+      <p>Certification:</p>
+      <p>Run time:</p>
+      <p>Genre:</p>
+    </div>
+    <!-- info should be stored (local storage) -->
+    <!-- empty box display error message "Please enter movie title" -->
+  </div>
+  <div class="card">
+    <div class="card-body text">
+      <p class="card-text">Cast:</p>
+    </div>
+  </div>
+  <div>
+
+    <div>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">Awards:</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  </div>
+  <div class="card">
+    <div class="card-body text">
+      <p class="card-text">Language:</p>
+    </div>
+  </div>
+  </div>
+
+  <!-- <div>
+    <div class="card" style="width:400px">
+      <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+      </div>
+    </div>  -->
+
+  <!-- WALL-E, Kung-fu panda, avatar and Cars -->
+
+  <!-- <aside>
+        <img src="movie-poster" class="rounded" alt="Movie poster">
+      </aside> -->
+  </div>
+  </main>
+
+
+
+
+
+
+
+
 
 
   <script src="./script.js"></script>
 </body>
+
 </html>
