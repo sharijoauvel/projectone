@@ -18,59 +18,72 @@
 <!--2 search buttons with click function -->
 
 <body>
-  <div class="container">
 
-    <form id="movie-form">
+  <h1>Movie search</h1>
 
-      <label for="movie-input">Search for movies</label>
-      <input type="text" id="movie-input"><br>
-      <button type="button" class="btn btn-outline-info">Rating</button>
-    </form>
-    <div id="movie-view"></div>
+  <!-- This form will be where users input movie title -->
+  <form id="movie-form">
+    <label for="movie-input">Movie title</label>
+    <input type="text" id="movie-input"><br>
+
+    <!-- This button will trigger our AJAX call -->
+    <input id="find-movie" type="submit" value="Submit">
+    <button type="button" class="btn btn-outline-info">Rating</button>
+  </form>
+  <!-- <form id="movie-form">
+    
+    <label for="movie-input">Search for movies</label>
+    <input type="text" id="movie-input"><br>
+    <input id="find-movie" type="submit" value="Movie Search">
+    
+  </form> -->
+  <div id="movie-view"></div>
 
   </div>
 
   <!-- text area for retrieved info -->
-  <div class="card">
-    <div class="card-body text">
-      <p class="card-text">
-      </p>Release date:</p>
-      <p>Certification:</p>
-      <p>Run time:</p>
-      <p>Genre:</p>
-    </div>
-    <!-- info should be stored (local storage) -->
-    <!-- empty box display error message "Please enter movie title" -->
-  </div>
-  <div class="card">
-    <div class="card-body text">
-      <p class="card-text">Cast:</p>
-    </div>
-  </div>
-  <div>
+  <!-- info should be stored (local storage) -->
+  <!-- empty box display error message "Please enter movie title" -->
 
+  <div class="grid-container">
+    <div class="card">
+      <div class="card-body text">
+        <p class="card-text">
+        </p>Release date:</p>
+        <p>Certification:</p>
+        <p>Run time:</p>
+        <p>Genre:</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body text">
+        <p class="card-text">Cast:</p>
+      </div>
+    </div>
     <div>
-      <div class="card">
-        <div class="card-body">
-          <p class="card-text">Awards:</p>
+
+      <div>
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">Awards:</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="card">
+      <div class="card-body text">
+        <p class="card-text">Language:</p>
+      </div>
 
-
-
-
-
-
-
-  </div>
-  <div class="card">
-    <div class="card-body text">
-      <p class="card-text">Language:</p>
     </div>
   </div>
+</div>
+<div class="card">
+  <div class="card-body text">
+    <p class="card-text">Privacy policy</p>
   </div>
+
+</div>
 
   <!-- <div>
     <div class="card" style="width:400px">
@@ -95,7 +108,8 @@
 
 
 
-
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="./script.js"></script>
 </body>
 

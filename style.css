@@ -19,14 +19,35 @@ padding: auto;
 /* .form-control{
   
 }
-.button{
-  color: yellow;
-  display:inline;
-  
-  
-}
 
 .card{
   display: grid;
- 
+  
 } */
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 10px;
+  background-color: none;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: none;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column: 1 / span 3;
+}
+.item2{
+  grid-column: span 1;
+}
+.item3 {
+
+  grid-row: span 3;
+}
