@@ -1,4 +1,4 @@
-/* :root
+/* /* :root
 .body{
   display: grid;
   display: flex;
@@ -24,30 +24,48 @@ padding: auto;
   display: grid;
   
 } */
+/* img {
+  max-width: 100%;
+  height: auto;
+} */
 
+/*img {
+  display: block;
+  width: 1000px;
+  height: 300px;
+}
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  row-gap: 10px;
+  grid-template-columns: 40%, 40%, 10%, 10%;
   gap: 10px;
-  background-color: none;
+  background-color: grey;
   padding: 10px;
 }
 
-.grid-container > div {
+.grid-container>div {
   background-color: none;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+  text-align: left;
+  padding: 75px 0;
+  font-size: 25px;
 }
 
 .item1 {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
 }
-.item2{
+
+.item2 {
   grid-column: span 1;
 }
+
 .item3 {
 
   grid-row: span 3;
 }
+
+.footer {
+  background-color: black;
+  text-align: right;
+  padding: 10px;
+} */
