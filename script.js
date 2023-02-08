@@ -47,4 +47,8 @@ window.onload = function () {
 function clearRecentMoviesAndReloadRecentMovies() {
   clearRecentMovies();
   renderRecentMovies();
+
+  var myModalEl = document.getElementById("staticBackdrop");
+  var modal = bootstrap.Modal.getInstance(myModalEl);
+  modal.hide();
 }
