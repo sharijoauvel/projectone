@@ -1,16 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Base</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./utils/movieState.js"></script>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+
+
+  <!-- Count API -->
+  <script async src="https://api.countapi.xyz/hit/https://sharijoauvel.github.io/projectone/visits/callback=liveviews"></script>
+  <!-- Count API end -->
+
+  <title>MovieBase</title>
 </head>
+
 <body>
+
+
+<!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"> 
+        <img src="assets/images/moviedatabaselogo.png" alt="Group 2 logo" width="50" height="100"> <span class="sr-only">(current)</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Count API -->
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item px-3 text-center">
+            <span class="navbar-text"> Live site visits:
+              <span id="visits" class="counttext"></span> 
+            </span>
+          </li>
+        </ul>      
+      </div>
+      <!-- Count API end -->
+
+  </nav>    
+<!-- Nav end-->
+
+
+
+<!--Jumbotron -->
+    <div class="jumbotron">
+      <div class="text-center jumbotrontext">
+        <p>Movie Base</p>
+      </div>
+    </div>
+<!-- Jumbotron end -->
+
+
+
+
+<!-- footer --> 
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top maintext" style="height:100px; ">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"></a>
+              <span class="text-muted"> © 2023 Copyright: 
+                <a class="links" href="https://github.com/sharijoauvel/projectone">GroupTwo </a>
+              </span>
+        </div>
+    
+        <div> <a class="nav-link text-right links" href = "mailto:email@email.com?subject = Movie Databas query = Message">
+            Contact us
+            </a>
+        </div>
+  </footer>                             
+<!-- footer end -->
   
 
+<!-- Count API -->
+  <script 
+  src="https://api.countapi.xyz/hit/projectgrouptwomoviedatabase/visits?callback=liveViews" async>
+  </script>
 
-  <script src="./script.js"></script>
-</body>
+
+  <script>
+    function liveViews(response) {
+    document.getElementById('visits').innerText = response.value;}
+  </script>
+
+<script   src="https://code.jquery.com/jquery-3.6.3.min.js"   integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="   crossorigin="anonymous"></script>
+
+
+  <script>
+    fetch('https://sharijoauvel.github.io/projectone/')
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  </script>
+<!-- Count API end -->
+
+
+    <!-- Recent Searches -->
+    <section id="recent-searches">
+      <div class="container text-center">
+        <h3 style="margin-bottom: 2rem">Recent Searches</h3>
+        <div id="recent-movies-list-row" class="row">
+        </div>
+        <div class="row clear-recent-movies-row">
+          <button class="text-right" onclick="clearRecentMoviesAndReloadRecentMovies()">Clear</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popper.js, then Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
