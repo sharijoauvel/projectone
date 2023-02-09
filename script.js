@@ -48,3 +48,4 @@ function clearRecentMoviesAndReloadRecentMovies() {
   clearRecentMovies();
   renderRecentMovies();
 }
+
