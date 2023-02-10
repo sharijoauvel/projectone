@@ -52,25 +52,45 @@
       </div>
     </div>
 <!-- Jumbotron end -->
- <h1>Movie search</h1>
+ <h1>Moviebase</h1>
 
   <!-- This form will be where users input movie title -->
-  <form id="movie-form">
-    <label for="movie-input">Movie title</label>
-    <input type="text" id="movie-input"><br>
+  <section>
+    <section>
+  <form class="moviebaseSearchBox" id="movie-form">
+    <label for="movie-input"></label>
+    <input class="moviebaseSearchBox" type="text" placeholder="Search Movie Title..." type="text" id="movie-input"><br>
 
     <!-- This button will trigger our AJAX call -->
     <input id="find-movie" type="submit" value="Submit">
     <!-- <button type="button" class="btn btn-outline-info">Rating</button> -->
   </form>
-  <!-- <form id="movie-form">
-    
+</section>
+</section>
+  <!-- <form id="movie-form"> -->
+<!--     
     <label for="movie-input">Search for movies</label>
     <input type="text" id="movie-input"><br>
     <input id="find-movie" type="submit" value="Movie Search">
     
-  </form> 
-  
+  </form>  -->
+  <!-- Display Movie Searches -->
+  <section>
+
+
+  <div class="d-flex justify-content-between" >
+    <div class="align-self-start" class=movieInformation></div><span id="poster"></span>
+ <ul class = "movieInformationList" style="font-weight: bold;">
+ <li class="movieTitle" style="list-style-type: none" >Title: <span id="title"></span></li>
+ <li style="list-style-type: none" >Plot: <span id="plot"></span></li>
+ <li style="list-style-type: none" >Actors: <span id="actors"></span></li>
+ <li style="list-style-type: none" >Director: <span id="director"></span></li>
+ <li style="list-style-type: none" >Rated: <span id="rated"></span></li>
+ <li style="list-style-type: none" >Runtime: <span id="runTime"></span></li>
+ <li style="list-style-type: none" >Genre: <span id="genre"></span></li>
+ <li style="list-style-type: none" >Language: <span id="language"></span></li>
+</section>
+
     <!-- Recent Searches -->
     <section id="recent-searches">
       <div class="container text-center">
@@ -82,7 +102,10 @@
  
   <div id="movie-view"></div>
 
-  <!-- R <h3 style="margin-bottom: 2rem">Recent Searches</h3>
+
+    
+
+  <!--  <h3 style="margin-bottom: 2rem">Recent Searches</h3> -->
       <div id="recent-movies-list-row" class="row"></div>
       <div class="row clear-recent-movies-row">
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -93,52 +116,34 @@
         </div>
       </div>
     </div>
-  </section>ecent Searches -->
-  <section id="recent-searches">
+  
+<!-- Display Movie Searches -->
+   <!-- <section id="recent-searches">
     <div class="container text-center">
-     
-
+      <h3 style="margin-bottom: 2rem">Recent Searches111</h3>
+      <div id="recent-movies-list-row" class="row"></div>
+      <div class="row clear-recent-movies-row">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Clear
+          </button>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
   <!-- text area for retrieved info -->
   <!-- info should be stored (local storage) -->
   <!-- empty box display error message "Please enter movie title" -->
 
-  <div class="grid-container">
-    <div class="card">
-      <div class="card-body text">
-        <p class="card-text">
-        </p>Release date:</p>
-        <p>Certification:</p>
-        <p>Run time:</p>
-        <p>Genre:</p>
-        <p>Language:</p>
-        <p>Cast:</p>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body text">
-        <p class="card-text">Cast:</p>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <p class="card-text">Awards:</p>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="card-body text">
-        <p class="card-text">Language:</p>
-      </div>
-    </div>
-  </div>
-
+<!-- 
   <div>
     <div class="card" style="width:400px">
       <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
       <div class="card-body">
       </div>
-    </div>
+    </div> -->
 
     <!-- WALL-E, Kung-fu panda, avatar and Cars -->
 

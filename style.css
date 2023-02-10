@@ -53,3 +53,36 @@
   }
 
 
+  .movieInfoBox{
+    outline: dashed;
+    display: block;
+    content: center;
+}
+
+.movieInformation{
+    flex-direction: row;
+  display: flex;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+li span {
+  font-weight: normal;
+}
+
+.moviebaseSearch{
+  display:flex;
+  justify-content: center;
+  align-content: stretch;
+}
+
+.moviebaseSearchBox{
+  display:flex;
+  
+}
+
+h1{
+  text-align:center;
+}
+
