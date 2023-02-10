@@ -57,3 +57,4 @@ function clearRecentMoviesAndReloadRecentMovies() {
   var modal = bootstrap.Modal.getInstance(myModalEl);
   modal.hide();
 }
+
