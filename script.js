@@ -1,25 +1,30 @@
-//Below functions are for recent movies
-addRecentMovie({
-  title: "Avatar",
-  posterURL:
-    "https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
-});
-addRecentMovie({
-  title: "Cars",
-  posterURL:
-    "https://m.media-amazon.com/images/M/MV5BMTg5NzY0MzA2MV5BMl5BanBnXkFtZTYwNDc3NTc2._V1_SX300.jpg",
-});
-addRecentMovie({
-  title: "Kung Fu Panda",
-  posterURL:
-    "https://m.media-amazon.com/images/M/MV5BODJkZTZhMWItMDI3Yy00ZWZlLTk4NjQtOTI1ZjU5NjBjZTVjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
-});
-addRecentMovie({
-  title: "WALL-E",
-  posterURL:
-    "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SX300.jpg",
-});
+//function to display movie information on
+var movieInput = $("#movie-input")
+var findMovieButton = $("#find-movie")
+function displayMovieInfo(event) {
+  event.preventDefault()
+  var movie = movieInput.val()
+  var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=df97ab33"
 
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+
+    console.log(response)
+    //Below functions are for recent movies
+    addRecentMovie({
+      title: response.Title,
+      posterURL: response.Poster
+    });
+    renderRecentMovies();
+  });
+
+}
+
+$("#find-movie").on("click", displayMovieInfo)
+
+//Below code is for recent movies
 function renderRecentMovies() {
   const recentMoviesListRow = document.getElementById("recent-movies-list-row");
 
@@ -47,5 +52,9 @@ window.onload = function () {
 function clearRecentMoviesAndReloadRecentMovies() {
   clearRecentMovies();
   renderRecentMovies();
+
+  var myModalEl = document.getElementById("staticBackdrop");
+  var modal = bootstrap.Modal.getInstance(myModalEl);
+  modal.hide();
 }
 

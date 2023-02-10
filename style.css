@@ -1,3 +1,4 @@
+
 .movie-card{
     width: 14rem; 
     height: 18rem;
@@ -15,6 +16,7 @@
 .clear-recent-movies-row {
     margin-top: 2rem;
 }
+
 
 .links{
     color: #EEC164 !important;
@@ -49,4 +51,5 @@
     font-size: 20px;
     color: grey;
   }
-  
+
+
