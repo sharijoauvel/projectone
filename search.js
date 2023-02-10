@@ -10,32 +10,49 @@ function displayMovieInfo(event) {
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-
     console.log(response)
-    $('#poster').html("<img src =' " + response.Poster + "' />");
-    $("#title").text(response.Title) 
-    $("#year").text(response.Year) 
-    $("#released").text(response.Released) 
-    $("#plot").text(response.Plot) 
-    $("#actors").text(response.Actors) 
-    $("#rated").text(response.Rated) 
-    $("#director").text(response.Director) 
-    $("#runTime").text(response.Runtime) 
-    $("#genre").text(response.Genre) 
-    $("#language").text(response.Language) 
-    //Below functions are for recent movies
-    addRecentMovie({
-      title: response.Title,
-      posterURL: response.Poster
-    });
-    renderRecentMovies();
+    $("#poster").append("<img src='" + response.Poster +"' />")
+    $("#title").text(response.Title)
+    $("#year").text(response.Year)
+    $("#released").text(response.Released)
+    $("#plot").text(response.Plot)
+    $("#actors").text(response.Actors)
+    $("#rated").text(response.Rated)
+    $("#director").text(response.Director)
+    $("#runTime").text(response.Runtime)
+    $("#genre").text(response.Genre)
+    $("#language").text(response.Language)
+    
+     
+
   });
 
 }
 
 $("#find-movie").on("click", displayMovieInfo)
 
-//Below code is for recent movies
+//Below functions are for recent movies
+addRecentMovie({
+  title: "Avatar",
+  posterURL:
+    "https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+});
+addRecentMovie({
+  title: "Cars",
+  posterURL:
+    "https://m.media-amazon.com/images/M/MV5BMTg5NzY0MzA2MV5BMl5BanBnXkFtZTYwNDc3NTc2._V1_SX300.jpg",
+});
+addRecentMovie({
+  title: "Kung Fu Panda",
+  posterURL:
+    "https://m.media-amazon.com/images/M/MV5BODJkZTZhMWItMDI3Yy00ZWZlLTk4NjQtOTI1ZjU5NjBjZTVjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+});
+addRecentMovie({
+  title: "WALL-E",
+  posterURL:
+    "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SX300.jpg",
+});
+
 function renderRecentMovies() {
   const recentMoviesListRow = document.getElementById("recent-movies-list-row");
 
@@ -68,4 +85,3 @@ function clearRecentMoviesAndReloadRecentMovies() {
   var modal = bootstrap.Modal.getInstance(myModalEl);
   modal.hide();
 }
-
