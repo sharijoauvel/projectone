@@ -68,15 +68,4 @@ function clearRecentMoviesAndReloadRecentMovies() {
   var modal = bootstrap.Modal.getInstance(myModalEl);
   modal.hide();
 }
-
-// Count api
-
-   
-      function liveViews(response) {
-      document.getElementById('visits').innerText = response.value;}
-    
-    
-      fetch('https://sharijoauvel.github.io/projectone/')
-        .then((response) => response.json())
-        .then((data) => console.log(data));
   
