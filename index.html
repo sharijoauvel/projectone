@@ -41,17 +41,19 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Count API 
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item px-3 text-center">
-            <span class="navbar-text"> Live site visits:
-              <span id="visits" class="counttext"></span> 
-            </span>
-          </li>
-        </ul>      
-      </div>
-      -->
+    <!-- Count API -->
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item px-3 text-center">
+              <span class="navbar-text"> Live site visits:
+                <span id="visits" class="counttext"></span> 
+              </span>
+            </li>
+          </ul>      
+        </div>
+        <!-- Count API end -->
+
+      
 
   </nav>    
 <!-- Nav end-->
@@ -67,18 +69,7 @@
   </section>
   
   
-  <br>
-  <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item px-3 text-center">
-            <span class="navbar-text"> Live site visits:
-              <span id="visits" class="counttext"></span> 
-            </span>
-          </li>
-        </ul>      
-      </div>
- 
-  
+  <b>
   <b>
 
 <!-- Jumbotron end -->
@@ -218,6 +209,18 @@
         </div>
   </footer>                             
 <!-- footer end -->
+      
+      <!-- Count API -->
+    <script 
+    src="https://api.countapi.xyz/hit/projectgrouptwomoviedatabase/visits?callback=liveViews" async>
+    </script>
+
+
+    <script>
+      function liveViews(response) {
+      document.getElementById('visits').innerText = response.value;}
+    </script>
+
 
     <!-- Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"
@@ -230,12 +233,7 @@
 
 
 
-<!-- Count API -->
-    <script src="https://api.countapi.xyz/hit/projectgrouptwomoviedatabase/visits?callback=liveViews" async>
-    
-      function liveViews(response) {
-      document.getElementById('visits').innerText = response.value;}
-    </script>
+
 
  <!-- Count API end -->
 </body>
