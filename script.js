@@ -69,3 +69,23 @@ function clearRecentMoviesAndReloadRecentMovies() {
   modal.hide();
 }
 
+// Count api
+
+    src="https://api.countapi.xyz/hit/projectgrouptwomoviedatabase/visits?callback=liveViews" async>
+    </script>
+
+
+    <script>
+      function liveViews(response) {
+      document.getElementById('visits').innerText = response.value;}
+    </script>
+
+<script   src="https://code.jquery.com/jquery-3.6.3.min.js"   integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="   crossorigin="anonymous"></script>
+
+
+    <script>
+      fetch('https://sharijoauvel.github.io/projectone/')
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+   
+
