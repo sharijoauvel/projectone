@@ -12,6 +12,17 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="./style.css">
+    
+    <script>
+      function liveViews(response) {
+      document.getElementById('visits').innerText = response.value;}
+    
+    
+      fetch('https://sharijoauvel.github.io/projectone/')
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    </script>
+    
   <!-- Javascript imports -->
     <title>Movie Base</title>
 
