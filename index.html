@@ -14,16 +14,9 @@
   <link rel="stylesheet" href="./style.css">
     
     
-    
-
-         
-           <script async src="https://api.countapi.xyz/hit/https://sharijoauvel.github.io/projectone/visits/callback=liveviews">
-   
-      
+   <script async src="https://api.countapi.xyz/hit/https://sharijoauvel.github.io/projectone/visits/callback=liveviews">
       function liveViews(response) {
       document.getElementById('visits').innerText = response.value;}
-    
-    
       fetch('https://sharijoauvel.github.io/projectone/')
         .then((response) => response.json())
         .then((data) => console.log(data));
@@ -48,7 +41,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Count API -->
+      <!-- Count API 
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item px-3 text-center">
@@ -58,7 +51,7 @@
           </li>
         </ul>      
       </div>
-      <!-- Count API end -->
+      -->
 
   </nav>    
 <!-- Nav end-->
@@ -72,9 +65,22 @@
       </div>
     </div>
   </section>
+  
+  
+  <br>
+  <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item px-3 text-center">
+            <span class="navbar-text"> Live site visits:
+              <span id="visits" class="counttext"></span> 
+            </span>
+          </li>
+        </ul>      
+      </div>
+ 
+  
   <b>
 
-  </b>
 <!-- Jumbotron end -->
 
   <!-- This form will be where users input movie title -->
